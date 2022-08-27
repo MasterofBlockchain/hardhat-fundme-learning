@@ -8,7 +8,7 @@ develompentChains.includes(network.name)
     : describe("FundMe", function () {
           let FundMe
           let deployer
-          const sendValue = ethers.utils.parseEther("1")
+          const sendValue = ethers.utils.parseEther("0.1")
           beforeEach(async function () {
               deployer = (await getNamedAccounts()).deployer
               FundMe = await ethers.getContract("FundMe", deployer)
@@ -21,7 +21,7 @@ develompentChains.includes(network.name)
               //await FundMe.withdrawal()
               //added by help
               const tx = await FundMe.withdrawal()
-              await tx.wait(1)
+              await tx.wait(2)
               const endingBalance = await FundMe.provider.getBalance(
                   FundMe.address
               )
