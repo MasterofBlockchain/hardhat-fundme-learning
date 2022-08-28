@@ -9,7 +9,7 @@ const { develompentChains } = require("../../helper-hardhat-config")
           let fundme
           let deployer
           let MockV3Aggregator
-          const sendValue = ethers.utils.parseEther("1")
+          const sendValue = ethers.utils.parseEther("0.1")
 
           beforeEach(async function () {
               //const acounts = await ethers.getSigners()
