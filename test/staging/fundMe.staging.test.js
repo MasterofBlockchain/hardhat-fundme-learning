@@ -21,7 +21,7 @@ develompentChains.includes(network.name)
               //await FundMe.withdrawal()
               //added by help
               const tx = await FundMe.withdrawal()
-              await tx.wait(3)
+              await tx.wait(1)
               const endingBalance = await FundMe.provider.getBalance(
                   FundMe.address
               )
